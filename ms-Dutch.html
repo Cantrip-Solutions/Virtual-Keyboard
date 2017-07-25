@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Virtual Keyboard</title>
+
+	<!-- demo -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/demo.css" rel="stylesheet">
+
+	<!-- jQuery & jQuery UI + theme (required) -->
+	<link href="css/jquery-ui.min.css" rel="stylesheet">
+	<script src="js/jquery-latest.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- keyboard widget css & script (required) -->
+	<link href="css/keyboard.css" rel="stylesheet">
+	<link href="css/keyboard-previewkeyset.css" rel="stylesheet">
+	<script src="js/jquery.keyboard.js"></script>
+
+	<!-- keyboard extensions (optional) -->
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/jquery.keyboard.extension-typing.js"></script>
+	<script src="js/jquery.keyboard.extension-previewkeyset.js"></script>
+
+	<!-- preloaded keyboard layout -->
+	<script src="layouts/keyboard-layouts-microsoft.js" charset="utf-8"></script>
+
+	<script>
+	$(function(){
+		var langset = 'ms-Dutch';
+
+		$('#multi').keyboard({
+			layout: langset,
+			stayOpen: true,
+            alwaysOpen:true
+		})
+		// activate the typing extension
+		.addTyping({
+			showTyping: true,
+			delay: 100
+		})
+		.previewKeyset();
+
+	});
+	</script>
+	<style>
+	.rtl {
+		text-align: right;
+	}
+	</style>
+</head>
+<body>
+
+
+<div id="page-wrap">
+
+	<div class="block2">
+		<div class="row">
+			<div class="col-xs-4"></div>
+
+		<h2>Virtual Keyboard</h2>
+		<textarea rows="4" id="multi"></textarea>
+	</div>
+
+	<br class="clear" />
+
+</div>
+
+</body>
+</html>
